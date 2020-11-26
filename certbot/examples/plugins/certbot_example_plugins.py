@@ -5,7 +5,7 @@ For full examples, see `certbot.plugins`.
 """
 
 import logging
-
+# test commit
 import zope.interface
 
 from certbot import interfaces
@@ -29,6 +29,7 @@ class Authenticator(dns_common.DNSAuthenticator):
 
     @classmethod
     def add_parser_arguments(cls, add):  # pylint: disable=arguments-differ
+        #print('emi emi emi emi emi emi emi emi emi emi emi')
         super(Authenticator, cls).add_parser_arguments(
             add, default_propagation_seconds=120
         )
@@ -46,30 +47,6 @@ class Authenticator(dns_common.DNSAuthenticator):
         )
 
     def more_info(self):  # pylint: disable=missing-docstring,no-self-use
-        return (
-            "This plugin configures a DNS TXT record to respond to a dns-01 challenge using "
-            + "the EuroDNS Remote REST API."
-        )
-
-    def prepare(self):  # pylint: disable=missing-docstring,no-self-use
-        return (
-            "This plugin configures a DNS TXT record to respond to a dns-01 challenge using "
-            + "the EuroDNS Remote REST API."
-        )
-
-    def get_chall_pref(self,domain):  # pylint: disable=missing-docstring,no-self-use
-        return (
-            "This plugin configures a DNS TXT record to respond to a dns-01 challenge using "
-            + "the EuroDNS Remote REST API."
-        )
-
-    def perform(self,achalls):  # pylint: disable=missing-docstring,no-self-use
-        return (
-            "This plugin configures a DNS TXT record to respond to a dns-01 challenge using "
-            + "the EuroDNS Remote REST API."
-        )
-
-    def cleanup(self,achalls):  # pylint: disable=missing-docstring,no-self-use
         return (
             "This plugin configures a DNS TXT record to respond to a dns-01 challenge using "
             + "the EuroDNS Remote REST API."
